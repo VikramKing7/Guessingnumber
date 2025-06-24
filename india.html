@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sc.scss/sc.css">
+</head>
+
+<body>
+    <div id="ki">
+        
+    <h1 class="h1">Guess the number</h1>
+    <label for="" id="lab">Enter Your Number:</label>
+    <input id="int">
+    <br>
+    <button id="btn" onclick="check()">Submit</button>
+    <label for="" class="re"></label>
+    <p id="score">Score :</p>
+    <p id="res"></p>
+
+
+
+    </div>
+
+
+    <script>
+
+var inp=document.getElementById("int");
+var para=document.getElementById("res");
+
+var rand=Math.floor(Math.random()*5)+1;
+var tot=10;
+var score=document.getElementById("score");
+
+function check()
+
+{
+    if(rand==inp.value)
+    {
+        console.log("Right");
+        para.textContent="Right";
+        alert("You won the game");
+        tot=tot+1;
+        score.textContent="Score:"+tot;
+
+
+    }
+    else
+    {
+        console.log("Wrong answer");
+        para.textContent="wrong";
+        alert("Next time try...");
+
+         tot=tot-1;
+        score.textContent="Score:"+tot;
+    }
+}
+
+
+        </script>
+
+    
+</body>
+</html>
